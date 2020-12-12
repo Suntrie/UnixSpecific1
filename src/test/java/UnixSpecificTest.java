@@ -10,7 +10,7 @@ public class UnixSpecificTest {
         UnixSpecific.printAllProcesses().forEach(it -> {
             String trimmed = it.trim();
 
-            Assert.assertFalse(Double.parseDouble(trimmed.split("\\s+")[1]) <= MAX_CPU);
+            Assert.assertTrue(Double.parseDouble(trimmed.split("\\s+")[1]) <= MAX_CPU);
 
         });
     }
